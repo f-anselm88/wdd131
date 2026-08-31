@@ -1,0 +1,204 @@
+/* ===== Custom properties ===== */
+:root {
+  --color-primary: #16324f;
+  --color-primary-dark: #0f2338;
+  --color-nav-bg: #2b2b2b;
+  --color-accent: #d1913c;
+  --color-bg: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-border: #d8d8d8;
+  --color-text: #232323;
+  --color-muted: #6b6b6b;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+  --max-width: 1000px;
+}
+
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0.5rem 0 1rem;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+#course-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background-color: var(--color-nav-bg);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+/* ===== Main ===== */
+main {
+  max-width: var(--max-width);
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+main > h1 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  padding: 0.75rem 1.25rem;
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 1.25rem 1.25rem 0.5rem;
+}
+
+.about-content,
+.location-content {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  align-items: flex-start;
+}
+
+.about-content p,
+.location-content p {
+  flex: 1;
+}
+
+.about-content img {
+  flex-shrink: 0;
+  width: 160px;
+  height: 190px;
+  object-fit: cover;
+}
+
+.location-content {
+  padding-top: 0;
+}
+
+.location-content figure {
+  flex-shrink: 0;
+  text-align: center;
+  width: 150px;
+}
+
+.location-content figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-muted);
+  margin-top: 0.4rem;
+}
+
+.resource-list {
+  list-style: disc;
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+}
+
+.resource-list li {
+  margin-bottom: 0.6rem;
+}
+
+@media (min-width: 750px) {
+  .card-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.15rem 0;
+}
+
+#lastModified {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+}
