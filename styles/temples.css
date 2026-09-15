@@ -1,0 +1,194 @@
+/* ==========================================================================
+   temples.css — mobile-first base styles
+   Design tokens:
+   Color   #FFFFFF page bg · #241B33 ink · #4B2A6E deep purple (header/footer)
+           #F4F1F8 hairline
+   Type    "Cormorant Garamond" (headings) · "Work Sans" (body/nav)
+   Layout  single-column mobile, header collapses into a hamburger menu
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-ink: #241B33;
+  --color-purple: #4B2A6E;
+  --color-purple-light: rgba(255, 255, 255, 0.85);
+  --color-hairline: #F0ECF6;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, Segoe UI, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* Visible focus state for keyboard users */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ---------- Header ---------- */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  background-color: var(--color-purple);
+  color: #fff;
+  position: relative;
+}
+
+.site-name {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-purple);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  z-index: 10;
+}
+
+nav.open {
+  max-height: 240px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  display: block;
+  padding: 0.6rem 0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-purple-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: color 0.15s ease;
+}
+
+nav li:last-child a {
+  border-bottom: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ---------- Main / gallery ---------- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 2.5rem;
+}
+
+h1 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  color: var(--color-purple);
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* Still "mobile view" — nav stays behind the hamburger here,
+   the grid just gains a second column before the larger breakpoint kicks in */
+@media (min-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+figcaption {
+  padding-top: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-purple);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  background-color: var(--color-purple);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.9rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0.15rem 0;
+}

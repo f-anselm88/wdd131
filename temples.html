@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+
+  <!-- Mobile-first CSS: base/mobile styles load first, larger-view overrides load second -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- Deferred JS: parses in parallel with HTML, executes after DOM is built -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <p class="site-name">Temple Album</p>
+    <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temples of The Church of Jesus Christ of Latter-day Saints</h1>
+
+    <div class="gallery">
+
+    <figure>
+      <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple" loading="lazy" width="400" height="300">
+      <figcaption>Aba Nigeria Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/adelaide-australia-temple.jpg" alt="Adelaide Australia Temple" loading="lazy" width="400" height="300">
+      <figcaption>Adelaide Australia Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/albuquerque-temple.jpg" alt="Albuquerque New Mexico Temple" loading="lazy" width="400" height="300">
+      <figcaption>Albuquerque New Mexico Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/anchorage-temple.jpg" alt="Anchorage Alaska Temple" loading="lazy" width="400" height="300">
+      <figcaption>Anchorage Alaska Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/apia-samoa-temple.jpg" alt="Apia Samoa Temple" loading="lazy" width="400" height="300">
+      <figcaption>Apia Samoa Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/arequipa-peru-temple.jpg" alt="Arequipa Peru Temple" loading="lazy" width="400" height="300">
+      <figcaption>Arequipa Peru Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/baton-rouge-louisiana-temple.jpg" alt="Baton Rouge Louisiana Temple" loading="lazy" width="400" height="300">
+      <figcaption>Baton Rouge Louisiana Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/belem-brazil-temple.jpg" alt="Belém Brazil Temple" loading="lazy" width="400" height="300">
+      <figcaption>Belém Brazil Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/accra-ghana-temple.jpg" alt="Ghana Accra Temple" loading="lazy" width="400" height="300">
+      <figcaption>Ghana Accra Temple</figcaption>
+    </figure>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Anselm Munango | Windhoek, Namibia</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
