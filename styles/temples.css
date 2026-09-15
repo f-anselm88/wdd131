@@ -7,7 +7,8 @@
    Layout  single-column mobile, header collapses into a hamburger menu
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+/* Google Fonts are loaded via <link> tags in temples.html's <head>,
+   with the required preconnect links — @import is not used here. */
 
 :root {
   --color-bg: #FFFFFF;
