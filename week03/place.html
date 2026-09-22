@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namibia | Place Page</title>
+  <meta name="description" content="A country profile page for Namibia, featuring key facts and current weather conditions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Namibia</h1>
+  </header>
+  <div class="accent-bar"></div>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 640px)" srcset="images/namibia-hero-large.webp">
+        <img
+          src="images/namibia-hero-small.webp"
+          srcset="images/namibia-hero-small.webp 640w, images/namibia-hero-large.webp 1600w"
+          sizes="100vw"
+          alt="Golden dunes of the Namib Desert at sunset"
+          class="hero-img"
+          width="1600" height="700">
+      </picture>
+
+      <article class="card data-card">
+        <h2>Data</h2>
+        <dl>
+          <div class="data-row"><dt>Area:</dt><dd>825,615 sq km</dd></div>
+          <div class="data-row"><dt>Population:</dt><dd>2,604,172</dd></div>
+          <div class="data-row"><dt>Capital:</dt><dd>Windhoek</dd></div>
+          <div class="data-row"><dt>Languages:</dt><dd>English, Afrikaans, Oshiwambo</dd></div>
+          <div class="data-row"><dt>Currency:</dt><dd>Namibian Dollar</dd></div>
+          <div class="data-row"><dt>Time Zone:</dt><dd>UTC+2</dd></div>
+          <div class="data-row"><dt>Calling Code:</dt><dd>+264</dd></div>
+          <div class="data-row"><dt>Internet TLD:</dt><dd>.na</dd></div>
+        </dl>
+      </article>
+
+      <article class="card weather-card">
+        <h2>
+          <img src="images/weather-icon.svg" alt="" class="weather-icon-mobile" width="24" height="24">
+          Weather
+        </h2>
+        <dl>
+          <div class="data-row"><dt>Temperature:</dt><dd id="temperature">7 &deg;C</dd></div>
+          <div class="data-row"><dt>Conditions:</dt><dd>Partly Cloudy</dd></div>
+          <div class="data-row"><dt>Wind:</dt><dd id="windSpeed">15 km/h</dd></div>
+          <div class="data-row"><dt>Wind Chill:</dt><dd id="windChill">N/A</dd></div>
+        </dl>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Anselm Munango &mdash; Namibia</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>

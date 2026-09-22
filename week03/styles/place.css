@@ -1,0 +1,169 @@
+:root {
+  --color-blue: #003580;
+  --color-red: #c4272f;
+  --color-green: #046a38;
+  --color-gold: #ffce00;
+  --color-white: #ffffff;
+  --color-ink: #1c2430;
+  --color-muted: #5a6472;
+  --card-bg: rgba(255, 255, 255, 0.94);
+
+  --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --radius: 10px;
+  --gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-white);
+}
+
+h1, h2 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.accent-bar {
+  height: 6px;
+  background-color: var(--color-gold);
+}
+
+/* Hero section: mobile-first, cards stack below the image */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin: -1rem -1.25rem 0.75rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+.data-row dt {
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.data-row dd {
+  margin: 0;
+  text-align: right;
+}
+
+.weather-icon-mobile {
+  display: inline-block;
+  margin-right: 0.15rem;
+}
+
+/* Weather icon shown only on wide view, via pseudo-element after the heading text */
+.weather-card h2::after {
+  content: '\26C5';
+  margin-left: auto;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.data-card, .weather-card {
+  margin: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* Wide view: overlay the Data and Weather cards on the hero image */
+@media (min-width: 640px) {
+  .hero {
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    width: 300px;
+    margin: 0;
+  }
+
+  .data-card {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .weather-card {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  .weather-card h2::after {
+    display: inline-block;
+  }
+
+  .site-header h1 {
+    font-size: 2.75rem;
+  }
+}
