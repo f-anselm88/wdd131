@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Anselm Munango">
   <title>Namibia | Place Page</title>
   <meta name="description" content="A country profile page for Namibia, featuring key facts and current weather conditions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/place.js" defer></script>
@@ -19,8 +21,9 @@
 
   <main>
     <section class="hero">
+      <h2 class="sr-only">Namibia hero image, key data, and weather</h2>
       <picture>
-        <source media="(min-width: 640px)" srcset="images/namibia-hero-large.webp">
+        <source media="(min-width: 640px)" srcset="images/namibia-hero-large.webp" sizes="100vw">
         <img
           src="images/namibia-hero-small.webp"
           srcset="images/namibia-hero-small.webp 640w, images/namibia-hero-large.webp 1600w"
