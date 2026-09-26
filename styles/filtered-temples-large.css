@@ -1,0 +1,101 @@
+/* ==========================================================================
+   filtered-temples-large.css — overrides for tablet and desktop viewports
+   Copied from temples-large.css (WDD 131 Week 02) for the Week 04
+   "Picture Album Enhancement" assignment; only addition is the permanent
+   underline on nav a.active, mirroring the existing hover treatment.
+
+   Loaded after filtered-temples.css; every rule here lives inside a
+   min-width query so mobile styles remain the default and larger views
+   layer on top.
+
+   Breakpoint chosen to match the course's responsive-behavior demo:
+   the hamburger nav persists up to roughly 690px wide, so the switch
+   to a full horizontal nav happens at 768px, not earlier.
+   ========================================================================== */
+
+@media (min-width: 768px) {
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    background-color: transparent;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 1.75rem;
+    padding: 0;
+  }
+
+  nav a {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: none;
+    padding: 0.25rem 0;
+    position: relative;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -3px;
+    height: 2px;
+    background-color: #fff;
+    transition: right 0.2s ease;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+
+  nav a:hover::after {
+    right: 0;
+  }
+
+  nav a.active {
+    color: #fff;
+  }
+
+  nav a.active::after {
+    right: 0;
+  }
+
+  main {
+    padding: 2.5rem 2rem 3.5rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  main {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .gallery {
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}
