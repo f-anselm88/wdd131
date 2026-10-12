@@ -1,0 +1,12 @@
+:root {
+    --color-forest: #1B4332;
+    --color-sand: #F2B134;
+    --color-berry: #C1121F;
+    --color-sea: #1E90FF;
+    --font-heading: "Merriweather", Georgia, serif;
+    --font-body: "Source Sans 3", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-sand);
+}

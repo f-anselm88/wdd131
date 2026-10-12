@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Contact Eraka Lyetu to suggest Rukwangali words, submit translation corrections, or contribute language-learning information."
+    >
+
+    <meta name="author" content="Anselm Munango">
+
+    <title>Contact | Eraka Lyetu</title>
+
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="">
+                <span class="brand-name">Eraka Lyetu</span>
+            </a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                ☰ Menu
+            </button>
+
+            <nav class="primary-nav"
+                 id="primary-navigation"
+                 aria-label="Main navigation">
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="vocabulary.html">Vocabulary</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-intro">
+
+            <p class="eyebrow">Your contribution matters</p>
+
+            <h1>Contact Eraka Lyetu</h1>
+
+            <p>
+                Help improve this learning resource by suggesting a word,
+                correcting a translation, or sharing information about
+                pronunciation and everyday usage.
+            </p>
+
+        </section>
+
+        <section class="contact-layout">
+
+            <div>
+                <h2>Contribute to the Language Collection</h2>
+
+                <p>
+                    Language resources become more useful when their
+                    information is accurate and reflects how people
+                    actually speak.
+                </p>
+
+                <p>
+                    You can use this form to suggest missing vocabulary,
+                    identify a mistake, or provide additional context.
+                </p>
+
+                <h3>Helpful Contributions</h3>
+
+                <ul>
+                    <li>A Rukwangali word or phrase.</li>
+                    <li>An accurate English translation.</li>
+                    <li>A correction to an existing entry.</li>
+                    <li>Pronunciation guidance.</li>
+                    <li>Context explaining when an expression is used.</li>
+                </ul>
+
+                <p class="form-note">
+                    Please avoid submitting private or sensitive personal
+                    information.
+                </p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+
+                <h2>Contribution Form</h2>
+
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="contributionType">Type of Contribution *</label>
+
+                    <select
+                        id="contributionType"
+                        name="contributionType"
+                        required
+                    >
+                        <option value="">Choose an option</option>
+                        <option value="new-word">Suggest a New Word</option>
+                        <option value="correction">Report a Mistake</option>
+                        <option value="pronunciation">Pronunciation Help</option>
+                        <option value="cultural-note">Cultural Information</option>
+                        <option value="other">Other Contribution</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rukwangaliWord">
+                        Rukwangali Word or Phrase
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rukwangaliWord"
+                        name="rukwangaliWord"
+                        maxlength="150"
+                        placeholder="Enter the word or phrase"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="englishMeaning">
+                        English Meaning
+                    </label>
+
+                    <input
+                        type="text"
+                        id="englishMeaning"
+                        name="englishMeaning"
+                        maxlength="250"
+                        placeholder="Enter the English meaning"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Information *</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        minlength="5"
+                        maxlength="2000"
+                        placeholder="Explain your suggestion or correction..."
+                        required
+                    ></textarea>
+                </div>
+
+                <p class="form-note">
+                    Fields marked with * are required.
+                </p>
+
+                <button class="button" type="submit">
+                    Submit Contribution
+                </button>
+
+                <p
+                    class="form-status"
+                    id="formStatus"
+                    role="status"
+                    tabindex="-1"
+                    hidden
+                ></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; <span id="year">2026</span> Anselm Munango |
+            Eraka Lyetu
+        </p>
+
+        <p><a href="siteplan.html">View Site Plan</a></p>
+
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
